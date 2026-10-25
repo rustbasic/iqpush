@@ -2,54 +2,53 @@
 
 ### 🚀 Live Demo: [https://rustbasic.github.io/iqpush/](https://rustbasic.github.io/iqpush/)
 
-> 프로젝트 안내와 기여를 위한 시작 문서입니다. 세부 동작이나 규칙은 변경될 수 있으니, 현재 코드를 기준으로 확인해 주세요.
+> This README introduces the project and provides a starting point for contributors. For current behavior and rules, refer to the source code, as details may change.
 
-## 게임 소개
+## Game Overview
 
-IQ Push는 플레이어와 여러 크기의 상자를 움직여 모든 버튼을 누르고, 열린 외곽 문을 통과해 라운드를 클리어하는 3D 퍼즐 게임입니다. 맵은 여러 라운드로 구성되며, 맵별 난이도를 평가하고 난이도 그룹을 선택할 수 있습니다.
+IQ Push is a 3D puzzle game in which you move a player and boxes of different sizes to activate every button, open an exit on the edge of the map, and clear each round. The game contains multiple maps, lets you rate their difficulty, and supports browsing maps by difficulty group.
 
-### 배경 설정
+### Story
 
-강한 지진으로 연구소가 무너졌습니다. 플레이어는 연구 장비를 밀어 비상 스위치를 작동시키고, 무너진 바닥의 구멍을 피해 출구를 열어 안전한 곳으로 탈출해야 합니다.
+A powerful earthquake has destroyed a research facility. Push the lab equipment to activate emergency switches, avoid gaps in the damaged floor, and open the exit to escape to safety.
 
-## 플레이 방법
+## How to Play
 
-- 방향키로 한 칸씩 이동합니다. 세로(Portrait) 방향에서는 화면 방향에 맞게 방향키 입력도 회전됩니다.
-- 맵의 인접한 바닥 칸을 마우스로 클릭하면 한 칸 이동합니다.
-- 플레이어를 클릭하면 포인터 추적이 켜져, 마우스 버튼을 놓고 포인터를 움직여도 플레이어가 따라 이동합니다. 이동 중 상자를 밀 수도 있습니다. 추적 중인 플레이어를 다시 클릭하면 포인터 추적이 해제됩니다.
-- 플레이어를 마우스 왼쪽 버튼으로 누른 채 움직이면 플레이어가 포인터를 따라 이동하며, 상자도 밀 수 있습니다.
-- 상자는 플레이어가 밀 수 있지만 당길 수는 없습니다. 막힌 곳에 밀어 넣지 않도록 주의하세요.
-- 모든 버튼을 눌러야 문이 열립니다. 플레이어와 큰 상자는 작은 버튼(`s`)과 큰 버튼(`S`)을 누를 수 있고, 작은 상자(`b`)는 작은 버튼만 누를 수 있습니다. 문은 맵 외곽에 있으며, 열린 상태로 문 타일을 밟으면 라운드를 클리어합니다.
-- `Z`: 한 수 되돌리기, `R`: 현재 라운드 다시 시작. 화면의 Undo·Restart 버튼도 사용할 수 있습니다.
-- 라운드마다 이동 횟수와 상자 밀기 횟수 제한이 있습니다. 제한을 넘으면 실패하며 Retry로 다시 도전할 수 있습니다. 클리어하면 Next Round로 다음 미완료 맵을 진행합니다.
-- Portrait / Landscape 버튼으로 화면 방향을 바꿀 수 있습니다.
+- Use the arrow keys to move one tile at a time. In Portrait mode, directional input is rotated to match the screen orientation.
+- Click an adjacent floor tile to move one step.
+- Click the player to enable pointer-follow mode. The player follows the pointer even after you release the mouse button, and can push boxes while moving. Click the player again to turn pointer-follow mode off.
+- You can also hold the left mouse button on the player and drag to move; boxes can be pushed this way as well.
+- You can push boxes but cannot pull them. Be careful not to push a box into a dead end.
+- Every button must be pressed to open the exit. The player and large boxes can activate both small buttons (`s`) and large buttons (`S`); small boxes (`b`) can activate only small buttons. The exit is on the edge of the map. Step onto its tile while it is open to clear the round.
+- Press `Z` to undo one move and `R` to restart the current round. You can also use the on-screen Undo and Restart buttons.
+- Each round has move and box-push limits. Exceeding a limit causes failure; use Retry to try again. After clearing a round, use Next Round to continue to the next unfinished map.
+- Use the Portrait / Landscape buttons to change the screen orientation.
 
-## 맵 선택과 난이도 평가
+## Map Selection and Difficulty Ratings
 
-- 맵 선택 메뉴에서 미평가 맵(U) 또는 난이도 1~6 그룹을 선택하고, 이전/다음 맵 버튼으로 해당 그룹의 맵을 이동합니다.
-- 별점 1~5와 빨간 별(6)을 사용해 난이도를 평가할 수 있습니다. 빨간 별은 내부 점수 집계에서 10점으로 계산됩니다.
-- 평가와 투표 수는 실행 파일이 있는 디렉터리의 `difficulty_ratings.txt`에 저장됩니다. 이 파일은 게임을 실행하면서 생성·갱신됩니다.
-- 그룹 분류는 저장된 평균 평가 점수에 따라 결정됩니다. 맵 선택 및 자동 다음 맵 흐름은 저장된 평가 상태에 영향을 받으므로, 파일을 직접 편집할 때는 백업을 권장합니다.
+- In the map selection menu, choose unrated maps (`U`) or a difficulty group from 1 to 6, then use the previous/next map buttons to browse maps in that group.
+- Rate difficulty with stars from 1 to 5 or the red star (6). The red star counts as 10 points in the internal score total.
+- Initial rating scores and vote counts for each map are provided by embedded data. Ratings changed during play apply only to the current run session.
 
-## 맵 제작
+## Creating Maps
 
-맵 데이터와 타일 규칙, 배치 기준 및 예제는 [MAP_GUIDE.md](MAP_GUIDE.md)를 참고하세요.
+See [MAP_GUIDE.md](MAP_GUIDE.md) for map data, tile rules, layout requirements, and examples.
 
-## 코드 구조
+## Code Structure
 
-- `src/mapdata.rs`: 맵 목록, 맵 크기 계산, 시작 위치와 타일 조회
-- `src/game.rs`: 게임 상태와 이동·밀기·되돌리기 등 퍼즐 규칙
-- `src/main.rs`: Bevy 앱 설정, 화면과 UI, 입력 처리, 카메라 방향, 맵 선택·평가 표시 및 저장 연결
-- `Cargo.toml`: 패키지 및 Bevy 의존성 설정
+- `src/mapdata.rs`: map list, map size calculations, starting positions, and tile lookups
+- `src/game.rs`: game state and puzzle rules such as movement, pushing, and undo
+- `src/main.rs`: Bevy app setup, rendering and UI, input handling, camera orientation, map selection, rating display, and persistence integration
+- `Cargo.toml`: package configuration and Bevy dependencies
 
-맵 규칙을 바꿀 때는 데이터 정의와 게임 로직 양쪽이 함께 영향을 받는지 살펴보세요. UI나 조작을 바꾼 뒤에는 맵 이동, 화면 방향 전환, 되돌리기, 재시작, 클리어·실패 흐름을 실행해 확인하는 것이 좋습니다.
+When changing map rules, check whether both the data definitions and game logic are affected. After changing the UI or controls, it is a good idea to test map navigation, orientation changes, undo, restart, and both clear and failure flows.
 
-## 빌드
+## Build
 
-Rust와 Cargo가 설치된 환경에서 저장소 루트에서 실행합니다:
+With Rust and Cargo installed, run this command from the repository root:
 
 ```sh
 cargo run
 ```
 
-개발 빌드 확인에는 `cargo build`를 사용할 수 있습니다.
+You can use `cargo build` to verify a development build.
