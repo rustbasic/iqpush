@@ -36,6 +36,8 @@ A powerful earthquake has destroyed a research facility. Push the lab equipment 
 ## Creating Maps
 
 See [MAP_GUIDE.md](MAP_GUIDE.md) for map data, tile rules, layout requirements, and examples.
+Use the built-in map editor to create and test maps, then publish them to the shared database so they are available to everyone.
+![IQ Push Map Editor Screenshot](iqpush-editor.png)
 
 ## Code Structure
 
