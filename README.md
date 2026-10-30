@@ -2,6 +2,8 @@
 
 ### 🚀 Live Demo: [https://rustbasic.github.io/iqpush/](https://rustbasic.github.io/iqpush/)
 
+![IQ Push Screenshot](iqpush-v012.png)
+
 > This README introduces the project and provides a starting point for contributors. For current behavior and rules, refer to the source code, as details may change.
 
 ## Game Overview
