@@ -2,11 +2,14 @@
 
 ### 🚀 Live Demo: [https://rustbasic.github.io/iqpush/](https://rustbasic.github.io/iqpush/)
 
+![IQ Push Screenshot](iqpush-v012.png)
+
 > This README introduces the project and provides a starting point for contributors. For current behavior and rules, refer to the source code, as details may change.
 
 ## Game Overview
 
 IQ Push is a 3D puzzle game in which you move a player and boxes of different sizes to activate every button, open an exit on the edge of the map, and clear each round. The game contains multiple maps, lets you rate their difficulty, and supports browsing maps by difficulty group.
+The puzzle concept was inspired in part by fond childhood memories of playing Sokoban.
 
 ### Story
 
