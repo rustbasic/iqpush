@@ -33,6 +33,10 @@ Include `P`, at least one door (`D`), at least one box (`B` or `b`), and at leas
 
 Maps may be up to 100 columns wide and 60 rows high. The current automatic validation checks for a player, at least one door `D` with a valid wall frame, at least one box (`B` or `b`), and at least one button (`S` or `s`). It does not check whether a door is actually on the map boundary, whether the box and button counts are compatible, whether routes are connected, or whether the puzzle is solvable. After adding or changing a map, test it in the game: press every button, open every door, and make sure the player can pass through a door.
 
+## Testing and Publishing
+
+Use **Practice play** to play a newly created map in the game and verify that it is solvable. Once you complete the map successfully, **Publish Map** becomes available. Select it to save the map to the database and make it public to everyone.
+
 ## Example: Final Approach
 
 The following is the `Final Approach` map from `src/mapdata.rs`. It demonstrates several large boxes and large buttons. Floor tiles are represented by spaces, including the spaces beyond the exit door. Spaces at the ends of rows are intentional and must not be trimmed. `O` represents a pit; unlike floor, it cannot be entered by the player.
