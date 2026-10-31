@@ -39,7 +39,7 @@ Use **Practice play** to play a newly created map in the game and verify that it
 
 ## Example: Final Approach
 
-The following is the `Final Approach` map from `src/mapdata.rs`. It demonstrates several large boxes and large buttons. Floor tiles are represented by spaces, including the spaces beyond the exit door. Spaces at the ends of rows are intentional and must not be trimmed. `O` represents a pit; unlike floor, it cannot be entered by the player.
+The following is the `Final Approach` map from `src/mapdata.rs`. It demonstrates several large boxes and large buttons. Floor tiles are represented by spaces, including the spaces beyond the exit door. Trailing spaces extend the floor beyond the room to suggest a corridor; they are optional and can be removed. `O` represents a pit; unlike floor, it cannot be entered by the player.
 
 ```text
 ###### 
