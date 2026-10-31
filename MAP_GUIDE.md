@@ -33,9 +33,14 @@ Include `P`, at least one door (`D`), at least one box (`B` or `b`), and at leas
 
 Maps may be up to 100 columns wide and 60 rows high. The current automatic validation checks for a player, at least one door `D` with a valid wall frame, at least one box (`B` or `b`), and at least one button (`S` or `s`). It does not check whether a door is actually on the map boundary, whether the box and button counts are compatible, whether routes are connected, or whether the puzzle is solvable. After adding or changing a map, test it in the game: press every button, open every door, and make sure the player can pass through a door.
 
+## Testing and Publishing
+
+Use **Practice play** to play a newly created map in the game and verify that it is solvable. Once you complete the map successfully, **Publish Map** becomes available. Select it to save the map to the database and make it public to everyone.
+Changing **Max moves**, **Max box moves**, or **Rows** disables **Publish Map**. Practice the map again and complete it successfully to re-enable publishing. Changing the **Title** or **Metadata** does not disable an already enabled **Publish Map**, so you can update those fields later without replaying the map.
+
 ## Example: Final Approach
 
-The following is the `Final Approach` map from `src/mapdata.rs`. It demonstrates several large boxes and large buttons. Floor tiles are represented by spaces, including the spaces beyond the exit door. Spaces at the ends of rows are intentional and must not be trimmed. `O` represents a pit; unlike floor, it cannot be entered by the player.
+The following is the `Final Approach` map from `src/mapdata.rs`. It demonstrates several large boxes and large buttons. Floor tiles are represented by spaces, including the spaces beyond the exit door. Trailing spaces extend the floor beyond the room to suggest a corridor; they are optional and can be removed. `O` represents a pit; unlike floor, it cannot be entered by the player.
 
 ```text
 ###### 
