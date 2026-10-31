@@ -36,6 +36,7 @@ Maps may be up to 100 columns wide and 60 rows high. The current automatic valid
 ## Testing and Publishing
 
 Use **Practice play** to play a newly created map in the game and verify that it is solvable. Once you complete the map successfully, **Publish Map** becomes available. Select it to save the map to the database and make it public to everyone.
+Changing **Max moves**, **Max box moves**, or **Rows** disables **Publish Map**. Practice the map again and complete it successfully to re-enable publishing. Changing the **Title** or **Metadata** does not disable an already enabled **Publish Map**, so you can update those fields later without replaying the map.
 
 ## Example: Final Approach
 
