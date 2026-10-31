@@ -6,8 +6,8 @@
   <title>IQ Push</title>
   
 <script type="module">
-import init, * as bindings from '/iqpush/iqpush-8fbc792212ca5e05.js';
-const wasm = await init({ module_or_path: '/iqpush/iqpush-4ed3dad35019ac27_bg.wasm' });
+import init, * as bindings from '/iqpush/iqpush-c9ca5970ab4141fa.js';
+const wasm = await init({ module_or_path: '/iqpush/iqpush-282afc180229ccc2_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -20,6 +20,6 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
     canvas { display: block; width: 100vw; height: 100vh; touch-action: none; }
   </style>
-<link rel="modulepreload" href="/iqpush/iqpush-8fbc792212ca5e05.js" crossorigin="anonymous" integrity="sha384-tNCeELEUOoUfU2fGyDpnGBiGySkJq/61bRLRRRiQEWNQU4YzbPW20Stq4obnSnS8"><link rel="preload" href="/iqpush/iqpush-4ed3dad35019ac27_bg.wasm" crossorigin="anonymous" integrity="sha384-UzZw50yJ3czCl52C+U7+EFU5EAgbo/HKafmA+IyfUXWBjGmVpCrv3tRBUoc6Bbuu" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/iqpush/iqpush-c9ca5970ab4141fa.js" crossorigin="anonymous" integrity="sha384-R1Fjlqr2n1VPKX8fArWzJwPZ063KkRWvJZGxB6FK8541Wrp02kIhQTZijacC11uK"><link rel="preload" href="/iqpush/iqpush-282afc180229ccc2_bg.wasm" crossorigin="anonymous" integrity="sha384-LoU/EnVaBl9XLYKmPXbePBlZk5jSD5OA2I6mbz/CxNRve9hTCCTCWU/bXTm9XP5H" as="fetch" type="application/wasm"></head>
 <body></body>
 </html>
