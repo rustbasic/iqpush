@@ -19,7 +19,7 @@ A powerful earthquake has destroyed a research facility. Push the lab equipment 
 
 - Use the arrow keys to move one tile at a time. In Portrait mode, directional input is rotated to match the screen orientation.
 - Click an adjacent floor tile to move one step.
-- Click the player to enable pointer-follow mode. The player follows the pointer even after you release the mouse button, and can push boxes while moving. Click the player again to turn pointer-follow mode off.
+- Click the player to enable pointer-follow mode; the pointer location marker turns red while this mode is active. The player follows the pointer even after you release the mouse button, and can push boxes while moving. Click the player again to turn pointer-follow mode off.
 - You can also hold the left mouse button on the player and drag to move; boxes can be pushed this way as well.
 - You can push boxes but cannot pull them. Be careful not to push a box into a dead end.
 - Every button must be pressed to open the exit. The player and large boxes can activate both small buttons (`s`) and large buttons (`S`); small boxes (`b`) can activate only small buttons. The exit is on the edge of the map. Step onto its tile while it is open to clear the round.
