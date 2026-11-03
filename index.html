@@ -7,7 +7,7 @@
   
 <script type="module">
 import init, * as bindings from '/iqpush/iqpush-d16e10abea1d90f2.js';
-const wasm = await init({ module_or_path: '/iqpush/iqpush-200046e931a3eae5_bg.wasm' });
+const wasm = await init({ module_or_path: '/iqpush/iqpush-1418d002d608c827_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -20,6 +20,6 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
     canvas { display: block; width: 100vw; height: 100vh; touch-action: none; }
   </style>
-<link rel="modulepreload" href="/iqpush/iqpush-d16e10abea1d90f2.js" crossorigin="anonymous" integrity="sha384-MGRlHc75GUHg4VozMf0iluPTtBY91qjwbTMpDqhwKrAiBNQmXwDPOpA9FOa/SLUC"><link rel="preload" href="/iqpush/iqpush-200046e931a3eae5_bg.wasm" crossorigin="anonymous" integrity="sha384-4z2PJ9U9cUE/0QIn5TCArMdEYYlLinTx8S3Nxywb9FlPqD//INhh2n4J3cWCPzdH" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/iqpush/iqpush-d16e10abea1d90f2.js" crossorigin="anonymous" integrity="sha384-MGRlHc75GUHg4VozMf0iluPTtBY91qjwbTMpDqhwKrAiBNQmXwDPOpA9FOa/SLUC"><link rel="preload" href="/iqpush/iqpush-1418d002d608c827_bg.wasm" crossorigin="anonymous" integrity="sha384-cVEnfklaHmQ+ZBtiP8sUjU+X4d40CREXb2gj28tn2VfqisHdlQ/z8H5urdwlJvln" as="fetch" type="application/wasm"></head>
 <body></body>
 </html>
