@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IQ Push</title>
+
+<script type="module">
+import init, * as bindings from '/iqpush/webgpu/iqpush-1a38948adba4e787.js';
+const wasm = await init({ module_or_path: '/iqpush/webgpu/iqpush-ae8d2f44070fcaeb_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+  <style>
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+    canvas { display: block; width: 100vw; height: 100vh; touch-action: none; }
+  </style>
+<link rel="modulepreload" href="/iqpush/webgpu/iqpush-1a38948adba4e787.js" crossorigin="anonymous" integrity="sha384-0ybnCbst6vfG0UoslDoFfo3S4cTf43KVOXStTmISfaaDz4JPXJIo4DCANKpsSf1R"><link rel="preload" href="/iqpush/webgpu/iqpush-ae8d2f44070fcaeb_bg.wasm" crossorigin="anonymous" integrity="sha384-eEiviggz/4JmYpxSdzXqEUz6hhG7US52MeYAhY01yH+hN7q8R5BNhasBkqPn7j8s" as="fetch" type="application/wasm"></head>
+<body></body>
+</html>

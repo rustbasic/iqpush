@@ -4,22 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>IQ Push</title>
-  
-<script type="module">
-import init, * as bindings from '/iqpush/iqpush-d16e10abea1d90f2.js';
-const wasm = await init({ module_or_path: '/iqpush/iqpush-2ccb18e8e1bce298_bg.wasm' });
-
-
-window.wasmBindings = bindings;
-
-
-dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
-
-</script>
   <style>
-    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
-    canvas { display: block; width: 100vw; height: 100vh; touch-action: none; }
+    html, body { margin: 0; width: 100%; height: 100%; }
+    body { display: grid; place-items: center; font: 16px sans-serif; }
   </style>
-<link rel="modulepreload" href="/iqpush/iqpush-d16e10abea1d90f2.js" crossorigin="anonymous" integrity="sha384-MGRlHc75GUHg4VozMf0iluPTtBY91qjwbTMpDqhwKrAiBNQmXwDPOpA9FOa/SLUC"><link rel="preload" href="/iqpush/iqpush-2ccb18e8e1bce298_bg.wasm" crossorigin="anonymous" integrity="sha384-cHNSZtOQqbyNv1OsBZ+rKour/okLoJGLM7yEoYSEg+xdMnMc/eGCqMulmxGtYKrE" as="fetch" type="application/wasm"></head>
-<body></body>
+  <script type="module">
+    let useWebGpu = false;
+    try {
+      useWebGpu = !!(navigator.gpu && await navigator.gpu.requestAdapter());
+    } catch (_) {
+      // Fall back when WebGPU is unavailable or adapter acquisition is denied.
+    }
+    window.location.replace(useWebGpu ? "webgpu/" : "webgl2/");
+  </script>
+</head>
+<body>Checking graphics support…</body>
 </html>
