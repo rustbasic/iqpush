@@ -10,10 +10,26 @@
   </style>
   <script type="module">
     let useWebGpu = false;
+    let timeoutId;
     try {
-      useWebGpu = !!(navigator.gpu && await navigator.gpu.requestAdapter());
+      useWebGpu = await Promise.race([
+        (async () => {
+          if (!navigator.gpu) return false;
+          const adapter = await navigator.gpu.requestAdapter();
+          if (!adapter) return false;
+          // Some embedded browsers expose an adapter but cannot create a usable WebGPU device.
+          const device = await adapter.requestDevice();
+          device.destroy();
+          return true;
+        })(),
+        new Promise(resolve => {
+          timeoutId = setTimeout(() => resolve(false), 5000);
+        }),
+      ]);
     } catch (_) {
-      // Fall back when WebGPU is unavailable or adapter acquisition is denied.
+      // Fall back when WebGPU is unavailable or device creation fails.
+    } finally {
+      clearTimeout(timeoutId);
     }
     window.location.replace(useWebGpu ? "webgpu/" : "webgl2/");
   </script>
