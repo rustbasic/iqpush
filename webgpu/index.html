@@ -4,14 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>IQ Push</title>
-  <script>
-    const firstFrameWatchdog = setTimeout(() => {
-      window.location.replace("../webgl2/");
-    }, 60000);
-    window.addEventListener("iqpush-first-frame", () => {
-      clearTimeout(firstFrameWatchdog);
-    }, { once: true });
-  </script>
+
+  <script src="webgpu-watchdog.js"></script>
 
 <script type="module">
 import init, * as bindings from '/iqpush/webgpu/iqpush-3fb83e6fd3cfb7d1.js';
