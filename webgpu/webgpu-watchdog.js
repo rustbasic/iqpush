@@ -20,8 +20,9 @@
     button.setAttribute("aria-label", "Switch to WebGL2 graphics");
     Object.assign(button.style, {
       position: "fixed",
-      top: "8px",
-      right: "8px",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
       zIndex: "2147483647",
       padding: "8px 12px",
       border: "1px solid #888",
