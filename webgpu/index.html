@@ -4,10 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>IQ Push</title>
+  <script>
+    const firstFrameWatchdog = setTimeout(() => {
+      window.location.replace("../webgl2/");
+    }, 60000);
+    window.addEventListener("iqpush-first-frame", () => {
+      clearTimeout(firstFrameWatchdog);
+    }, { once: true });
+  </script>
 
 <script type="module">
-import init, * as bindings from '/iqpush/webgpu/iqpush-602e5bbee096dace.js';
-const wasm = await init({ module_or_path: '/iqpush/webgpu/iqpush-fafcd05720fe9200_bg.wasm' });
+import init, * as bindings from '/iqpush/webgpu/iqpush-3fb83e6fd3cfb7d1.js';
+const wasm = await init({ module_or_path: '/iqpush/webgpu/iqpush-8692c68561ca0511_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -20,6 +28,6 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
     canvas { display: block; width: 100vw; height: 100vh; touch-action: none; }
   </style>
-<link rel="modulepreload" href="/iqpush/webgpu/iqpush-602e5bbee096dace.js" crossorigin="anonymous" integrity="sha384-SXLEijfF6bJiB/eN0x8mZuXPRytfXb6bMire7UGvZbaV2OZW4mGB6wLhhtR/G8/f"><link rel="preload" href="/iqpush/webgpu/iqpush-fafcd05720fe9200_bg.wasm" crossorigin="anonymous" integrity="sha384-kDqrKm/OZbW/MJzT7dc30w8gQdYzLGhVzWxuENid9pCMs4vxGqClOj+frJmtlZVD" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/iqpush/webgpu/iqpush-3fb83e6fd3cfb7d1.js" crossorigin="anonymous" integrity="sha384-oPzDUc+2GBhIsTInhiUOhhalbGLjgoMSLQCV6MJQqmwtcalyfM6RcUgH3rGl/4Mi"><link rel="preload" href="/iqpush/webgpu/iqpush-8692c68561ca0511_bg.wasm" crossorigin="anonymous" integrity="sha384-tN/yvpoajrwYAcGrKRrhWH7Q6BDZjpEqchpNelXVNhM1/9Piq/hCiFT2C7Kk99Zp" as="fetch" type="application/wasm"></head>
 <body></body>
 </html>
