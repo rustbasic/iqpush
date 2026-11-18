@@ -8,8 +8,8 @@
   <script src="webgpu-watchdog.js"></script>
 
 <script type="module">
-import init, * as bindings from '/iqpush/webgpu/iqpush-3fb83e6fd3cfb7d1.js';
-const wasm = await init({ module_or_path: '/iqpush/webgpu/iqpush-8692c68561ca0511_bg.wasm' });
+import init, * as bindings from '/iqpush/webgpu/iqpush-544c2799ba63ecea.js';
+const wasm = await init({ module_or_path: '/iqpush/webgpu/iqpush-5ff702f238d2fea7_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -22,6 +22,6 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
     canvas { display: block; width: 100vw; height: 100vh; touch-action: none; }
   </style>
-<link rel="modulepreload" href="/iqpush/webgpu/iqpush-3fb83e6fd3cfb7d1.js" crossorigin="anonymous" integrity="sha384-oPzDUc+2GBhIsTInhiUOhhalbGLjgoMSLQCV6MJQqmwtcalyfM6RcUgH3rGl/4Mi"><link rel="preload" href="/iqpush/webgpu/iqpush-8692c68561ca0511_bg.wasm" crossorigin="anonymous" integrity="sha384-tN/yvpoajrwYAcGrKRrhWH7Q6BDZjpEqchpNelXVNhM1/9Piq/hCiFT2C7Kk99Zp" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/iqpush/webgpu/iqpush-544c2799ba63ecea.js" crossorigin="anonymous" integrity="sha384-aOXYGV0CAmwB/UDruQ7BN+kMp36egRnE2lvx2eNCZTVDl7HGAIO1Wk5N8h8VkbLc"><link rel="preload" href="/iqpush/webgpu/iqpush-5ff702f238d2fea7_bg.wasm" crossorigin="anonymous" integrity="sha384-yq6XKUQ3CPqLAZIOKjBoVDD397KNIZaSdJDs0yciAyiVUjQ2RIintSii3NMBephZ" as="fetch" type="application/wasm"></head>
 <body></body>
 </html>
