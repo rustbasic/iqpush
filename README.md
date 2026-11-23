@@ -62,7 +62,7 @@ You can use `cargo build` to verify a development build.
 
 This project is written in Rust and uses the following libraries:
 
+- [egui-bevy](https://github.com/rustbasic/egui-bevy)
 - [egui](https://github.com/emilk/egui)
 - [Bevy](https://github.com/bevyengine/bevy)
-- [egui-bevy](https://github.com/rustbasic/egui-bevy)
 - [SpacetimeDB](https://github.com/clockworklabs/SpacetimeDB)
