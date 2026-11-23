@@ -57,3 +57,12 @@ cargo run
 ```
 
 You can use `cargo build` to verify a development build.
+
+## Technology
+
+This project is written in Rust and uses the following libraries:
+
+- [egui-bevy](https://github.com/rustbasic/egui-bevy)
+- [egui](https://github.com/emilk/egui)
+- [Bevy](https://github.com/bevyengine/bevy)
+- [SpacetimeDB](https://github.com/clockworklabs/SpacetimeDB)
